@@ -218,6 +218,7 @@ SpinnerValueFactory.setConverter(doubleConverter);
 
 
 class SelectRoute {
+
     private Connection connect() {
         // SQLite connection string
         String url = "jdbc:sqlite:C:/Users/PC/Desktop/ExamplesSQL/ass6.db";
@@ -252,23 +253,30 @@ class SelectRoute {
 
             // set the value
             pstmt.setDouble(1, tim);
-
             pstmt.setInt(2, f);
             pstmt.setInt(3, t);
             //
             ResultSet rs  = pstmt.executeQuery();
 
-           // ArrayList<String> tt= new ArrayList<>();
+          //  ArrayList<String> tt= new ArrayList<>();
             // loop through the result set
+            if (!rs.next()) {
+                System.out.println("Sorry, there is no scheduled route!");
+            }
+
             while (rs.next()) {
 
-                System.out.println(
+               System.out.println(
                         "TrainID: "+
                                 rs.getString("trainID") + "\t" +
                                 "/Departure Time:"  +
-                                rs.getDouble("arrivalTime") +  "\t"
+                                rs.getDouble("arrivalTime") +  "\t");
 
-                );
+
+
+              // tt.add(rs.getString("trainID"));
+
+
 
 
                //tt.add(rs.getString("trainID"));
@@ -279,13 +287,15 @@ class SelectRoute {
 
                 // rs.getString("stationID"));
             }
-           // return tt
+
+          //  return tt;
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
 
 
     }
+
 
 
     public int tranf_f(String from) {
