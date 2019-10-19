@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" prefHeight="158.0" prefWidth="237.0" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Label text="From:" GridPane.rowIndex="2" />
+        <Label text="To:" GridPane.rowIndex="3" />
+        <ChoiceBox fx:id="stations_From" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="btn" mnemonicParsing="false" text="Search" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <ChoiceBox fx:id="stations_To" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="screen" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="6" />
+        <Spinner fx:id="timing" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Time:" GridPane.rowIndex="1" />
+    </children>
+    <columnConstraints>
+        <ColumnConstraints maxWidth="38.0" minWidth="33.0" prefWidth="38.0" />
+        <ColumnConstraints maxWidth="158.0" minWidth="10.0" prefWidth="130.0" />
+        <ColumnConstraints maxWidth="100.0" minWidth="10.0" prefWidth="60.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+        <RowConstraints maxHeight="28.0" minHeight="22.0" prefHeight="28.0" />
+        <RowConstraints maxHeight="28.0" minHeight="10.0" prefHeight="28.0" />
+        <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="29.0" />
+        <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="22.0" />
+        <RowConstraints maxHeight="1.7976931348623157E308" minHeight="20.0" />
+    </rowConstraints>
+</GridPane>
